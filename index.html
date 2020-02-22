@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      #introHeader{
-        background-color: green;
-      }
-      .row-full{
-         width: 100vw;
-         position: relative;
-         margin-left: -50vw;
-         height: 50%;
-         margin-top: -50vw;
-         left: 50%;
-      }
-      body{
-          background-color:blue;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="introHeader" class="row-full">
-      this is some text
-      <div id="pfpicContainer">
-      </div>
-      <div id="nameContainer">
-        <div id="name">
-        </div>
-        <div id="qualities">
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
 
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="intro-header" class="test-row-full">
+        <div class="name">
+            Mary Kovic
+        </div>
+        <div id="fade-out-header">
+        </div>
+        <ul id="navbar">
+            <li><a href="#contact-container" class="sliding-link">Contact Me</a></li>
+            <li><a href="#proj-exp-container" class="sliding-link">Projects and Experience</a></li>
+            <li><a href="#skills-container" class="sliding-link">Skills</a></li>
+            <li><a href="#about-container" class="sliding-link">About</a></li>
+        </ul>
+        <div class="navbar-underlay">
+            TESTTESTESTEF
+        </div>
+    </div>
+    <div class="contents">
+        <div id="about-container" class="section-container test-row-full">
+            <div id="about" class="section-header">
+                About Me
+
+            </div>
+            <div id="pfpicContainer">
+                <img id=pfpimg src="pfpic.png">
+            </div>
+        </div>
+        <div id="skills-container" class="section-container test-row-full">
+            <div id="skills" class="section-header">
+                Skills
+            </div>
+        </div>
+        <div id="proj-exp-container" class="section-container test-row-full">
+            <div id="proj-exp" class="section-header">
+                Projects and Experience
+            </div>
+        </div>
+        <div id="contact-container" class="section-container test-row-full">
+            <div id="contact" class="section-header">
+                Contact
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
 

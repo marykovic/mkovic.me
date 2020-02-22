@@ -1,0 +1,145 @@
+
+        html {
+            scroll-behavior: smooth;
+            min-width: 671px;
+            min-height: 464px;
+        }
+        
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin: 0;
+        }
+        
+        .test-row-full {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        #intro-header {
+            height: 130vh;
+            background-image: linear-gradient(#1fe0be, black);
+            /*border-radius: 0px 0px 0px 75px;*/
+            background-image: url("https://www.transparenttextures.com/patterns/gplay.png"), linear-gradient( 45deg, rgba(7, 3, 98, 1) -0.1%, rgba(179, 26, 132, 1) 60.8%, rgba(239, 186, 83, 1) 100.2%);
+        }
+        
+        #fade-out-header {
+            position: absolute;
+            height: 30vh;
+            bottom: 0;
+            top: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #f5fffa);
+        }
+        
+        #pfpimg {
+            height: 35vh;
+            display: block;
+            width: auto;
+            margin-top: 5vh;
+            margin-left: 5vh;
+            margin-right: 5vh;
+            float: left;
+        }
+        
+        #qualities {
+            width: 100%;
+            height: 40%;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-right: 3vw;
+            bottom: 0;
+            right: 0px;
+            overflow: hidden;
+            height: auto;
+            position: absolute;
+            padding-top: 16px;
+            width: 100%;
+            min-width: 671px;
+        }
+        
+        li {
+            float: right;
+            margin-right: 1vw;
+            margin-left: 1vw;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-top: 2px solid #e5e4e2;
+            border-bottom: 2px solid #e5e4e2;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+        
+        li a {
+            display: block;
+            color: #e5e4e2;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        ul a:hover {
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            /* ...and now for the proper property */
+            transition: .5s;
+            color: rgb(255, 149, 0);
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            padding-top: 0;
+        }
+        
+        .contents {
+            /*background-image: linear-gradient( to bottom, rgba(0, 0, 0, 1) 11%, rgba(21, 38, 82, 1), rgba(57, 255, 186, 1));*/
+            background-color: #f5fffa;
+        }
+        
+        .section-container {
+            height: 100vh;
+        }
+        
+        .name {
+            display: inline-flex;
+            height: auto;
+            margin-top: 5vh;
+            margin-left: 5vh;
+            margin-right: 5vh;
+            padding-left: 5vh;
+            padding-right: 5vh;
+            font-size: 100px;
+            color: #e5e4e2;
+            border-top: 10px solid #e5e4e2;
+            border-bottom: 10px solid #e5e4e2;
+            border-radius: 20px;
+            padding-bottom: 2vh;
+        }
+        
+        .section-header {
+            display: inline-flex;
+            height: auto;
+            padding: 2vh;
+            font-size: 60px;
+            color: #e5e4e2;
+            border-top: 10px solid #e5e4e2;
+            border-bottom: 10px solid #e5e4e2;
+            border-radius: 20px;
+            margin-left: 5vh;
+            margin-right: 5vh;
+            padding-left: 5vh;
+            padding-right: 5vh;
+            margin-top: 10vh;
+        }
+        
+        .transparent {
+            background: rgba(0, 0, 0, 0.20);
+        }

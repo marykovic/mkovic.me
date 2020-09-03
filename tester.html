@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta nam="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Kovic</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            min-width: 671px;
+            min-height: 464px;
+        }
+        
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin: 0;
+        }
+        
+        .test-row-full {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .section-container {
+            height: 100vh;
+        }
+        
+        #header-container {
+            z-index: -1;
+            height: 130vh;
+            background-image: linear-gradient(#1fe0be, black);
+            background-image: url("https://www.transparenttextures.com/patterns/gplay.png"), linear-gradient( 45deg, rgba(7, 3, 98, 1) -0.1%, rgba(179, 26, 132, 1) 60.8%, rgba(239, 186, 83, 1) 100.2%);
+        }
+        
+        #fade-out-header {
+            z-index: 0;
+            position: absolute;
+            height: 30vh;
+            bottom: 0;
+            top: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #fffff0);
+        }
+        
+        #navbar-container {
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            height: 55px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+        
+        ul {
+            /*Gets rid of bullet points*/
+            list-style-type: none;
+            height: auto;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        
+        li {
+            float: right;
+            margin-right: 1vw;
+            margin-left: 1vw;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-top: 2px solid #e5e4e2;
+            border-bottom: 2px solid #e5e4e2;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+        
+        li a {
+            display: block;
+            color: #e5e4e2;
+            text-align: center;
+            text-decoration: none;
+        }
+        /*
+        *
+        *
+        */
+        
+        .sticky {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            padding-top: 0;
+        }
+        
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container" class="test-row-full" style="border: 5px solid red;">
+        <div id="name" style="border: 5px solid orange;">
+            Mary Kovic
+        </div>
+        <div id="navbar-container" style="border: 2px solid black;">
+            <ul style="border: 5px solid darkgoldenrod;">
+                <li><a href="#contact-container" class="sliding-link">Contact Me</a></li>
+                <li><a href="#proj-exp-container" class="sliding-link">Projects and Experience</a></li>
+                <li><a href="#skills-container" class="sliding-link">Skills</a></li>
+                <li><a href="#about-container" class="sliding-link">About</a></li>
+            </ul>
+        </div>
+
+        <div id="fade-out-header" style="border: 5px solid green;">
+        </div>
+    </div>
+
+
+
+    <div id="info-contents" style="border: 5px solid blue;">
+        <div id="about-container" class="section-container test-row-full">
+            <div id="about" class="section-header" style="border: 5px solid pink;">
+                About Me
+
+            </div>
+            <div id="pfpicContainer" style="border: 5px solid magenta;">
+                <img id=pfpimg src="pfpic.png">
+            </div>
+        </div>
+
+        <div id="skills-container" class="section-container test-row-full" style="border: 5px solid violet;">
+            <div id="skills" class="section-header">
+                Skills
+            </div>
+        </div>
+
+        <div id="proj-exp-container" class="section-container test-row-full" style="border: 5px solid blueviolet;;">
+            <div id="proj-exp" class="section-header">
+                Projects and Experience
+            </div>
+        </div>
+
+        <div id="contact-container" class="section-container test-row-full" style="border: 5px solid brown;;">
+            <div id="contact" class="section-header">
+                Contact
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar-container");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            //if the navigation bar is at the top of the window, activate the
+            //sticky class, else, remove sticky class.
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,243 +1,183 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-            min-width: 671px;
-            min-height: 464px;
-        }
-        
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            margin: 0;
-        }
-        
-        .test-row-full {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        
-        #intro-header {
-            height: 130vh;
-            background-image: linear-gradient(#1fe0be, black);
-            /*border-radius: 0px 0px 0px 75px;*/
-            background-image: url("https://www.transparenttextures.com/patterns/gplay.png"), linear-gradient( 45deg, rgba(7, 3, 98, 1) -0.1%, rgba(179, 26, 132, 1) 60.8%, rgba(239, 186, 83, 1) 100.2%);
-        }
-        
-        #fade-out-header {
-            position: absolute;
-            height: 30vh;
-            bottom: 0;
-            top: 100vh;
-            width: 100%;
-            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #fffff0);
-        }
-        
-        #pfpimg {
-            height: 35vh;
-            display: block;
-            width: auto;
-            margin-top: 5vh;
-            margin-left: 5vh;
-            margin-right: 5vh;
-            float: left;
-        }
-        
-        #qualities {
-            width: 100%;
-            height: 40%;
-        }
-        
-        ul {
-            list-style-type: none;
-            padding-right: 3vw;
-            bottom: 0;
-            right: 0;
-            height: auto;
-            position: absolute;
-            padding-top: 16px;
-            width: 100%;
-            min-width: 671px;
-            background-color: rgba(0, 0, 0, 0.20);
-        }
-        
-        .navbar-underlay {
-            z-index: -1;
-            /*adjusts position underneath navbar*/
-            background-color: black;
-            opacity: .4;
-            bottom: 0;
-        }
-        
-        li {
-            float: right;
-            margin-right: 1vw;
-            margin-left: 1vw;
-            padding: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-top: 2px solid #e5e4e2;
-            border-bottom: 2px solid #e5e4e2;
-            border-radius: 5px;
-            font-size: 25px;
-        }
-        
-        li a {
-            display: block;
-            color: #e5e4e2;
-            text-align: center;
-            text-decoration: none;
-        }
-        
-        ul a:hover {
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            /* ...and now for the proper property */
-            transition: .5s;
-            color: rgb(255, 149, 0);
-        }
-        
-        .sticky {
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            padding-top: 0;
-        }
-        
-        .contents {
-            /*background-image: linear-gradient( to bottom, rgba(0, 0, 0, 1) 11%, rgba(21, 38, 82, 1), rgba(57, 255, 186, 1));*/
-            background-color: #fffff0;
-        }
-        
-        .section-container {
-            height: 100vh;
-        }
-        
-        .name {
-            display: inline-flex;
-            height: auto;
-            margin-top: 5vh;
-            margin-left: 5vh;
-            margin-right: 5vh;
-            padding-left: 5vh;
-            padding-right: 5vh;
-            font-size: 100px;
-            color: #e5e4e2;
-            border-top: 10px solid #e5e4e2;
-            border-bottom: 10px solid #e5e4e2;
-            border-radius: 20px;
-            padding-bottom: 2vh;
-        }
-        
-        .section-header {
-            display: inline-flex;
-            height: auto;
-            padding: 2vh;
-            font-size: 60px;
-            color: #121212;
-            border-top: 10px solid #121212;
-            border-bottom: 10px solid #121212;
-            border-radius: 20px;
-            margin-left: 5vh;
-            margin-right: 5vh;
-            padding-left: 5vh;
-            padding-right: 5vh;
-            margin-top: 10vh;
-        }
-        
-        .transparent {
-            background: rgba(0, 0, 0, 0.20);
-        }
-    </style>
-</head>
-
-<body>
-    <div id="intro-header" class="test-row-full">
-        <div class="name">
-            Mary Kovic
-        </div>
-        <div id="fade-out-header">
-        </div>
-        <ul id="navbar">
-            <li><a href="#contact-container" class="sliding-link">Contact Me</a></li>
-            <li><a href="#proj-exp-container" class="sliding-link">Projects and Experience</a></li>
-            <li><a href="#skills-container" class="sliding-link">Skills</a></li>
-            <li><a href="#about-container" class="sliding-link">About</a></li>
-        </ul>
-        <div class="navbar-underlay">
-            TESTTESTESTEF
-        </div>
-    </div>
-    <div class="contents">
-        <div id="about-container" class="section-container test-row-full">
-            <div id="about" class="section-header">
-                About Me
-
-            </div>
-            <div id="pfpicContainer">
-                <img id=pfpimg src="pfpic.png">
-            </div>
-        </div>
-        <hr>
-        <div id="skills-container" class="section-container test-row-full">
-            <div id="skills" class="section-header">
-                Skills
-            </div>
-        </div>
-        <hr>
-        <div id="proj-exp-container" class="section-container test-row-full">
-            <div id="proj-exp" class="section-header">
-                Projects and Experience
-            </div>
-        </div>
-        <hr>
-        <div id="contact-container" class="section-container test-row-full">
-            <div id="contact" class="section-header">
-                Contact
-            </div>
-        </div>
-    </div>
-
-    <script>
-        /*Navigation bar sticky effect*/
-        window.onscroll = function() {
-            myFunction()
-        };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Last Fucking Chance</title>
+        <link rel="icon" href="favicon.ico">
+        <style>
+            html {
+                scroll-behavior: smooth;
+                min-width: 550px;
+                min-height: 464px;
+                background-color: #e5e4e2;
             }
-        }
+            body {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                margin: 0;
+            }
 
-        /*opacity function*/
+            .section{
+                height: 100vh;
+            }
 
-        $(window).scroll(function() {
-            var scrollTop = $(this).scrollTop();
+            #section-1{
+                height: 94vh;
+            }
 
-            $('.navbar-underlay').css({
-                opacity: function() {
-                    var elementHeight = $(this).height();
-                    return 1 - (elementHeight - scrollTop) / elementHeight;
-                }
-            });
-        });
-    </script>
-</body>
+            #section-2{}
+            #section-3{}
+            #section-4{}
+            #section-5{}
 
+            li{
+                float:left;
+                padding-top: 1.5vh;
+                /*default color of navbar items*/
+                color: white;
+            }
+
+            li a{
+                color: white;
+                text-decoration: none;
+            }
+
+            li a:hover{
+                color:#DBC3F0;
+            }
+
+
+
+            p{
+                width: 80vw;
+                max-width: 1200px;
+                text-align:center;
+                margin-top: 5vh;
+            }
+
+            h1{
+                margin :0;
+                padding-top: 20vh;
+            }    
+
+            #navbar-list{
+                margin: 0;  
+                padding-left:50px;
+                padding-right:50px;;
+                list-style-type: none;
+                height:100%;
+                
+            }
+
+            nav{
+                /*applies sticky effect to navbar*/
+                position:sticky;
+                top:0;
+
+                /*Cosmetic modifications*/
+                background-color: rgba(0, 0, 0, 0.40);
+                min-height: 50px;
+                height: 6vh;
+                
+            }     
+
+            .header-image{
+                width:150px;
+                height: 150px;
+                border-radius: 100px;
+            }
+
+            #header-image-container{
+                width:100%;
+                margin-top: 5vh;
+            }
+
+            .justify-center{
+                display:flex;
+                justify-content: center;
+            }
+
+            .justify-space-evenly{
+                display:flex;
+                justify-content: space-evenly;
+            }
+
+            .caption{
+                display:block;
+                text-align: center;
+                margin-top: 15px;
+                max-width: 25vh;
+            }
+
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+
+        </style>
+    </head>
+
+    <div id="section-1" style="background-color: geen;">  
+        <div class="head-title-container justify-center">
+            <h1 class="head-title">Some Text</h1>
+        </div>
+
+        <div class="head-txt-container justify-center">
+            <p> Description about myself. Objectives, goals, accomplishments: Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit 
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                ccaecat cupidatat non proident, sunt in culpa qui officia 
+                deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        
+        <div id="header-image-container" class="justify-space-evenly">
+            <figure class="image-caption">
+                <div class="justify-center">
+                    <img src="white-background.jpg" class="header-image">
+                </div>
+                <figcaption class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+            </figure>
+            
+            <figure class="image-caption">
+                <div class="justify-center">
+                    <img src="white-background.jpg" class="header-image">
+                </div>
+                <figcaption class="caption">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+            </figure>
+            
+            <figure class="image-caption">
+                <div class="justify-center">
+                    <img src="white-background.jpg" class="header-image">
+                </div>
+                <figcaption class="caption">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+            </figure>
+        </div>   
+        
+    </div>
+
+    <nav>
+        <ul id="navbar-list" class="justify-space-evenly">
+            <li><a href="#section-1">item 1</a></li>
+            <li><a href="#section-2">item 2</a></li>
+            <li><a href="#section-3">item 3</a></li>
+            <li><a href="#section-4">item 4</a></li>
+            <li><a href="#section-5">item 5</a></li>
+        </ul>
+    </nav>
+
+    <div id="section-2" class="section" style="background-color: yelow;"></div>
+    <div id="section-3" class="section" style="background-color: orngered;"></div>
+    <div id="section-4" class="section" style="background-color: rd;"></div>
+    <div id="section-5" class="section" style="background-color: prple;"></div>
+
+    
 </html>

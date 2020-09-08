@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Last Fucking Chance</title>
-        <link rel="icon" href="resources/favicon.ico">
+        <link rel="icon" href="favicon.ico">
         <style>
             html {
                 scroll-behavior: smooth;
@@ -14,20 +14,22 @@
                 background-color: #e5e4e2;
             }
             body {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                */
+                font: normal 100% Helvetica, Arial, sans-serif;
                 overflow-x: hidden;
                 overflow-y: scroll;
                 margin: 0;
             }
 
             .section{
-                height: 100vh;
+                min-height: 100vh;
+                padding-top: 6vh;
             }
 
             #section-1{
-                height: 94vh;
+                min-height: 100vh;
             }
-
             #section-2{}
             #section-3{}
             #section-4{}
@@ -35,7 +37,7 @@
 
             li{
                 float:left;
-                padding-top: 1.5vh;
+                padding-top: 2vh;
                 /*default color of navbar items*/
                 color: white;
             }
@@ -52,21 +54,32 @@
 
 
             p{
-                width: 80vw;
+                width: 80%;
                 max-width: 1200px;
-                text-align:center;
+                text-align:left;
                 margin-top: 5vh;
             }
 
             h1{
                 margin :0;
-                padding-top: 20vh;
+                padding: 15px;
+                border-radius: 10px 50px;
+
+                font-size: 400%;
+                border:5px solid #DBC3F0;
+                display: inline;
             }    
+
+            h3{
+                text-align: center;
+                max-width: 25vh;
+
+            }
 
             #navbar-list{
                 margin: 0;  
                 padding-left:50px;
-                padding-right:50px;;
+                padding-right:50px;
                 list-style-type: none;
                 height:100%;
                 
@@ -76,6 +89,7 @@
                 /*applies sticky effect to navbar*/
                 position:sticky;
                 top:0;
+                margin-top: -6vh;
 
                 /*Cosmetic modifications*/
                 background-color: rgba(0, 0, 0, 0.40);
@@ -85,8 +99,8 @@
             }     
 
             .header-image{
-                width:150px;
-                height: 150px;
+                width:15vh;
+                height: 15vh;
                 border-radius: 100px;
             }
 
@@ -112,19 +126,93 @@
                 max-width: 25vh;
             }
 
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
+            .banner{
+                height: 20vh;
             }
+
+            .banner-img{
+                height: 100%;
+                width: 100%;
+            }
+
+            .head-title-container{
+                padding: 10% 10% 0 10%;
+                max-width: 1200px;
+                
+            }
+
+            /************************* FLIP CARD *****************************/
+            
+            .card{
+                display: inline-block;
+
+                width: 20vw;
+                min-width: 350px;
+                height: 10vw;
+                min-height: 175px;
+
+
+                margin: 0 2.5vh 2.5vh 2.5vh;
+                border-radius: 10px;
+                background:rgba(66, 66, 66, 0.4);
+                
+            }
+
+            #card-container{
+                /*padding: 0 10% 0 10%;
+                */
+                width: 80%;
+                padding: 5vh 0 0 0;
+                max-width: 1300px;
+                margin: auto;
+                justify-content:center;
+                flex-wrap: wrap;
+                
+                
+            }
+
+
+
 
         </style>
     </head>
 
-    <div id="section-1" style="background-color: geen;">  
-        <div class="head-title-container justify-center">
-            <h1 class="head-title">Some Text</h1>
+    <div class="banner">
+        <img src="white-background.jpg" class="banner-img">
+    </div>
+    <nav id="navbar-location">
+        <ul id="navbar-list" class="justify-space-evenly">
+            <li><a href="#navbar-location">item 1</a></li>
+            <li><a href="#section-2">item 2</a></li>
+            <li><a href="#section-3">item 3</a></li>
+            <li><a href="#section-4">item 4</a></li>
+            <li><a href="#section-5">item 5</a></li>
+        </ul>
+    </nav>
+
+    <div id="section-1"  style="background-color: geen;">  
+        
+        <div class="head-title-container">
+            <h1 class="head-title">I am a...</h1>
+        </div>
+
+        <div id="card-container" class="justify-center">
+            <div class="card justify-center"><img src="git-icon.png"></div>
+            <div class="card"><img src="git-icon.png"></div>
+            <div class="card"><img src="git-icon.png"></div>
+            <div class="card"><img src="git-icon.png"></div>
+            <div class="card"><img src="git-icon.png"></div>
+        </div>
+
+        
+    </div>
+
+
+
+
+    <div id="section-2" class="section" style="background-color: yelow;">
+        <div class="head-title-container">
+            <h1 class="head-title">About Me</h1>
         </div>
 
         <div class="head-txt-container justify-center">
@@ -141,43 +229,48 @@
         
         <div id="header-image-container" class="justify-space-evenly">
             <figure class="image-caption">
+                <h3>Example Title</h3>
                 <div class="justify-center">
-                    <img src="resources/white-background.jpg" class="header-image">
+                    <img src="white-background.jpg" class="header-image">
                 </div>
                 <figcaption class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
             </figure>
             
             <figure class="image-caption">
+                <h3>Example Title</h3>
                 <div class="justify-center">
-                    <img src="resources/white-background.jpg" class="header-image">
+                    <img src="white-background.jpg" class="header-image">
                 </div>
                 <figcaption class="caption">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
             </figure>
             
             <figure class="image-caption">
+                <h3>Example Title</h3>
                 <div class="justify-center">
-                    <img src="resources/white-background.jpg" class="header-image">
+                    <img src="white-background.jpg" class="header-image">
                 </div>
                 <figcaption class="caption">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
             </figure>
         </div>   
-        
+    
+    
+    </div>
+    <div id="section-3" class="section" style="background-color: orngered;">
+        <div class="head-title-container">
+            <h1 class="head-title">Section 3</h1>
+        </div>
     </div>
 
-    <nav>
-        <ul id="navbar-list" class="justify-space-evenly">
-            <li><a href="#section-1">item 1</a></li>
-            <li><a href="#section-2">item 2</a></li>
-            <li><a href="#section-3">item 3</a></li>
-            <li><a href="#section-4">item 4</a></li>
-            <li><a href="#section-5">item 5</a></li>
-        </ul>
-    </nav>
-
-    <div id="section-2" class="section" style="background-color: yelow;"></div>
-    <div id="section-3" class="section" style="background-color: orngered;"></div>
-    <div id="section-4" class="section" style="background-color: rd;"></div>
-    <div id="section-5" class="section" style="background-color: prple;"></div>
+    <div id="section-4" class="section" style="background-color: rd;">
+        <div class="head-title-container">
+            <h1 class="head-title">Section 4</h1>
+        </div>
+    </div>
+    <div id="section-5" class="section" style="background-color: prple;">
+        <div class="head-title-container">
+            <h1 class="head-title">Section 5</h1>
+        </div>
+    </div>
 
     
 </html>
